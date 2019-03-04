@@ -23,3 +23,12 @@ We do not need to flip any elements
 
 
 
+
+
+
+The problem can be solved using Dynamic Programming. Let dp[i][j] be the maximum sub-array sum from index i with j flips. A recursive function can be written in order to solve the problem and we can memoize it to avoid multiple function calls. The recursive DP function (findSubarraySum(ind, flips)) will be called from every index with number of initial flips as 0.
+
+
+
+The recursive function will have two states, one will be if we flip the i-th index. The second one if we don’t flip the i-th index. The base cases being if the ind==n, when we have a completed a traversal till last index. We can use memoization in order to store the results which can be used later to avoid multiple same function calls. The maximum of all dp[i][0] will be our answer.
+
